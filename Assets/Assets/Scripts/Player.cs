@@ -29,9 +29,14 @@ public class Player : MonoBehaviour
             Shoot();
             //Debug.Log("presed attack");
         }
+        Gravity();
         PlayerMovement();
     }
 
+    void Gravity()
+    {
+        cc.Move(new Vector3(0,1,0) * gravity * Time.deltaTime);
+    }
     void PlayerMovement()
     {
         Vector2 moveDir = moveAction.ReadValue<Vector2>();

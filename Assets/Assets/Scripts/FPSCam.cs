@@ -8,6 +8,11 @@ public class FPSCam : MonoBehaviour
 
     private float xRotation = 0f;
 
+    void Start(){
+        //lock mouse
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     void Update()
     {
         Vector2 mouse = Mouse.current.delta.ReadValue();
